@@ -7,6 +7,7 @@
 body{
   font-family: 'Open Sans', sans-serif;
   background-color: #fdf5e4;
+  overflow: hidden;
 }
 header, main, footer{
   width: 80%;
@@ -22,8 +23,9 @@ a{
 header{
   background-color: #efba54;
   position: relative;
-  min-height: 150px;
+  height: 150px;
   padding: 70px 135px 20px 40px;
+  transition: padding 1s;
 }
 header img{
   position: absolute;
@@ -32,7 +34,9 @@ header img{
   z-index: 100;
   vertical-align: middle;
 }
-
+header h1{
+  font-size: 30px;
+}
 /* Proprietà main */
 main{
   background-color: white;
@@ -75,6 +79,7 @@ main h2{
 }
 .column input[type="checkbox"]{
   margin-right: 25px;
+  pointer-events: none;
 }
 
 .red-label{
@@ -114,10 +119,16 @@ main h2{
   .column{
     flex-basis: 50%;
   }
+  header{
+    padding-top: 40px;
+  }
 }
 @media all and (max-width: 767px){
   .column{
     flex-basis: 100%;
+  }
+  header{
+    padding-top: 10px;
   }
 }
 
