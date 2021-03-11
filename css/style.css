@@ -1,0 +1,143 @@
+/* Proprietà generali */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fdf5e4;
+}
+header, main, footer{
+  width: 80%;
+}
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+
+/* Proprietà header */
+header{
+  background-color: #efba54;
+  position: relative;
+  min-height: 150px;
+  padding: 70px 135px 20px 40px;
+}
+header img{
+  position: absolute;
+  top: -30px;
+  right: -100px;
+  z-index: 100;
+  vertical-align: middle;
+}
+
+/* Proprietà main */
+main{
+  background-color: white;
+  padding: 40px 40px 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: calc(100vh - 250px);
+}
+main h2{
+  margin: 40px 0 20px;
+}
+
+#burger-name{
+  font-size: 30px;
+  border: 0;
+  padding: 2px;
+}
+
+/* Riga ingredienti */
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+/* Colonna ingrediente */
+.column{
+  flex-basis: calc(100% / 3);
+  font-weight: 600;
+  margin: 10px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.column img{
+  width: 55px;
+  margin-right: 25px;
+}
+.column label{
+  margin-right: 25px;
+}
+.column input[type="checkbox"]{
+  margin-right: 25px;
+}
+
+.red-label{
+  color: red;
+  font-weight: 400;
+}
+
+#calcPrice{
+  display: block;
+  min-height: 60px;
+  width: 200px;
+  margin: 30px auto 0;
+  font-size: 25px;
+  font-weight: 600;
+  background-color: #efba54;
+  border: 0;
+  border-radius: 10px;
+  outline: none;
+}
+
+#calcPrice:active{
+  border: 2px solid black;
+}
+
+#coupon{
+  margin: 0 20px;
+  border: 0;
+  background-color: #fdf5e4;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0 10px;
+}
+
+@media all and (min-width: 768px) and (max-width: 1200px){
+  .column{
+    flex-basis: 50%;
+  }
+}
+@media all and (max-width: 767px){
+  .column{
+    flex-basis: 100%;
+  }
+}
+
+/* Proprietà footer */
+footer{
+  display: flex;
+  justify-content: space-between;
+  background-color: #bc3b59;
+  padding: 10px 40px;
+  color: white;
+  align-items: center;
+  height: 100px;
+}
+
+  /* H2 prezzo finale JS */
+#price{
+  font-size: 30px;
+  text-align: center;
+  padding-left: 20px;
+}
+#price:before{
+  content: '€ ';
+}

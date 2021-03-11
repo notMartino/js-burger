@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROVA</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+     <!-- Font Awesome -->
+     <script src="https://kit.fontawesome.com/2e0cc00556.js" crossorigin="anonymous"></script>
+
+     <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Create Your Burger</h1>
+      <img src="img/burger-top.png" alt="Burger">
+    </header>
+    
+    <main>
+      <input type="text" placeholder="Name Your Burger" name="burger-name" id="burger-name">
+
+      <h2>Ingredients</h2>
+
+      <!-- Riga ingredienti -->
+      <ul class="row">
+        <li class="column">
+          <img src="img/cheese.svg" alt="Formaggio">
+          <label for="">Cheese</label>
+          <input type="checkbox" name="cheese" id="cheese" data-extra="1">
+          <label class="red-label" for="">add</label>
+        </li>
+
+        <li class="column">
+          <img src="img/tomato.svg" alt="Pomodoro">
+          <label for="">Tomato</label> 
+          <input type="checkbox" name="tomato" id="tomato" data-extra="1">
+          <label class="red-label" for="">add</label>
+        </li>
+
+        <li class="column">
+          <img src="img/fried-egg.svg" alt="Uomo fritto">
+          <label for="">Egg</label>
+          <input type="checkbox" name="egg" id="egg" data-extra="1">
+          <label class="red-label" for="">add</label>
+        </li>
+
+        <li class="column">
+          <img src="img/lettuce.svg" alt="Lattuga">
+          <label for="">Lettuce</label>
+          <input type="checkbox" name="lettuce" id="lettuce" data-extra="0.80">
+          <label class="red-label" for="">add</label>
+        </li>
+
+        <li class="column">
+          <img src="img/mustard.svg" alt="Mostarda">
+          <label for="">Mustard</label>
+          <input type="checkbox" name="mustard" id="mustard" data-extra="0.20">
+          <label class="red-label" for="">add</label>
+        </li>
+
+        <li class="column">
+          <img src="img/ketchup.svg" alt="Ketchup">
+          <label for="">Ketchup</label>
+          <input type="checkbox" name="ketchup" id="ketchup" data-extra="0.20">
+          <label class="red-label" for="">add</label>
+        </li>
+      </ul>
+
+      <label for="coupon">Discount Coupon</label>
+      <input type="text" name="coupon" id="coupon">
+
+      <input type="button" id="calcPrice" value="Calculate">
+    </main>
+
+    <footer>
+      <h2>Your Price</h2>
+      <h2 id="price">50.00</h2>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>    
+</html>
